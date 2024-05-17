@@ -1,0 +1,18 @@
+package com.example.demo;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		CreatingThreadViaExtendingThreadClass counter1 = new CreatingThreadViaExtendingThreadClass(1);
+		CreatingThreadViaExtendingThreadClass counter2 = new CreatingThreadViaExtendingThreadClass(2);
+		
+	    long startTime = System.currentTimeMillis();
+		counter1.run(); //Run should be called by JVM
+		System.out.println("**************************");
+		counter2.run(); //Run should be called by JVM
+		long endTime = System.currentTimeMillis();
+		System.out.println("Total time required to process: "+(endTime-startTime));
+	}
+
+}
